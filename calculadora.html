@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registre sua compra</h1>
+    Nome do produto <input type="text" id="input_nome">
+    Valor do produto <input type="text" id="input_valor">
+    <button onclick="registrar()">Registrar o produto</button>
+    <button onclick="calcular()">Calcular gasto com o produto</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+    // Criando variavel global para armazenar os itens na lista
+    var lista_produto = []
+    var lista_preco = []
+
+    // Criando a função para registrar os produtos
+    function registrar() {
+        var produto = input_nome.value;
+        var valor = Number(input_preco.value);
+
+        //validando se o valor que o usuario digitou é valido
+    if(valor < 0) {
+        alert(`O valor está incorreto, por favor digite um numero valido!`)
+    }else{
+        // registrando o valor na lista
+        lista_produto.push(produto)
+        lista_preco.push(valor)
+    }
+
+
+
+
+
+
+
+
+    }
+
+</script>
