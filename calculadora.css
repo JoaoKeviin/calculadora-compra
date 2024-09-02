@@ -1,0 +1,21 @@
+body{
+    background: linear-gradient(12333deg, #53933e, transparent);
+
+}
+
+.box-container{
+    position: absolute;
+    top: 22%;
+    left: 27%;
+    display: flex;
+    border: 1px solid #000;
+    justify-content: center;
+    width: 44%;
+    height: 370px;
+}
+
+.box-conteudo{
+
+}
+
+

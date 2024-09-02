@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculadora.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Registre sua compra</h1>
-    Nome do produto <input type="text" id="input_nome">
-    Valor do produto <input type="text" id="input_valor">
-    <button onclick="registrar()">Registrar o produto</button>
-    <button onclick="calcular()">Calcular gasto com o produto</button>
-    <button onclick="ver()">Ver produtos</button>
-    <div id="div_mensagem"></div>
 
+    <div class="box-container">
+
+    <div class="box-conteudo">
+    <h1>Registre sua compra</h1>
+
+    Nome do produto <input type="text" id="input_nome"> <br> <br>
+
+    Valor do produto <input type="text" id="input_valor">
+
+    <button onclick="registrar()">Registrar o produto</button> <br>
+
+    <button onclick="calcular()">Calcular gasto com o produto</button> <br>
+
+    <button onclick="ver()">Ver produtos</button>  <br>
+    <div id="div_mensagem"></div>
+    </div>
+    </div>
 </body>
 </html>
 
