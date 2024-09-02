@@ -11,6 +11,7 @@
     Valor do produto <input type="text" id="input_valor">
     <button onclick="registrar()">Registrar o produto</button>
     <button onclick="calcular()">Calcular gasto com o produto</button>
+    <button onclick="ver()">Ver produtos</button>
     <div id="div_mensagem"></div>
 
 </body>
@@ -25,7 +26,7 @@
     // Criando a função para registrar os produtos
     function registrar() {
         var produto = input_nome.value;
-        var valor = Number(input_preco.value);
+        var valor = Number(input_valor.value);
 
         //validando se o valor que o usuario digitou é valido
     if(valor < 0) {
@@ -35,14 +36,60 @@
         lista_produto.push(produto)
         lista_preco.push(valor)
     }
+    }
 
 
+    // calculo total de quanto foi gasto.
+    function calcular() {
 
+      // criando a variavel com valor 0 para receber a somatoria do valor de cada produto
+        var calculoTotal = 0;
 
+        // percorrendo a lista para somar o preco e adicionar na variavel
 
+        for (let index = 0; index < lista_preco.length; index++) {
+            const listagem_preco = lista_preco[index];
 
+            calculoTotal += listagem_preco;
+            
+        }
+
+        // trazendo o valor total para o usuario
+        div_mensagem.innerHTML = `Você gastou o total de: R$${calculoTotal} Reais`
 
 
     }
+
+
+        // criando a função para ver os produtos
+    function ver() {
+
+        // Declarando a variavel, para nao reescrever o produto
+        div_mensagem.innerHTML = ``
+
+
+        // utiizando o for para poder percorrer a lista de produto
+        for (let index = 0; index < lista_produto.length; index++) {
+
+            // pegando o indice daquele produto, junto com o preco
+            const listagem_produto = lista_produto[index];
+            const listagem_preco = lista_preco[index]
+
+            // listando o produto, juntamente com os respectivos preços
+            div_mensagem.innerHTML += `Você adicionou o produto: ${listagem_produto} no valor: R$${listagem_preco} Reais! <br>`
+         
+            // mostrando a quantidade de itens ja cadastrados
+            div_mensagem.innerHTML += `Com isso você já tem: ${index + 1} produtos cadastrados <br> <br>`
+        }
+        
+   
+    }
+
+
+
+
+
+
+    
 
 </script>
