@@ -45,9 +45,9 @@
         //validando se o valor que o usuario digitou é valido
     if(valor < 0) {
         alert(`O valor está incorreto, por favor digite um numero valido!`)
-    }else if(produto == ""){
+    }else if(produto == "" && valor == "" || valor == ""){
 
-        alert(`Digite um produto`)
+        alert(`Digite um produto ou valor valido`)
 
     }else{
         // registrando o valor na lista
